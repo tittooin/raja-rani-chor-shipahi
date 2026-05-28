@@ -51,9 +51,13 @@ export const GameEngine = {
     // Resolve dynamic host: custom server IP support added for mobile APK local testing!
     let host = serverIp ? serverIp.trim() : '';
     if (!host) {
-      host = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-        ? 'localhost:8787' 
-        : window.location.host;
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        host = 'localhost:8787';
+      } else if (window.location.hostname.endsWith('.pages.dev')) {
+        host = 'raja-rani-chor-sipahi-backend.moremagical4.workers.dev';
+      } else {
+        host = window.location.host;
+      }
     }
     
     // Remove ws:// or wss:// from host prefix if the user typed it by mistake
