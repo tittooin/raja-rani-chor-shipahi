@@ -15,5 +15,5 @@ new_classes = ["GameRoom"]
 [[d1_databases]]
 binding = "DB"
 database_name = "raja_rani_db"
-database_id = "7c3aed59-a78b-4c64-838e-b799df25e32b" # Placeholder for production DB UUID
+database_id = "482edcb2-5d62-4f6c-9aac-ad8c7bc058dd" # Placeholder for production DB UUID
 migrations_dir = "migrations"
