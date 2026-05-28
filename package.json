@@ -1,0 +1,9 @@
+{
+  "name": "raja-rani-chor-shipahi-root",
+  "version": "1.0.0",
+  "description": "Root package.json to forward builds on Cloudflare Pages",
+  "scripts": {
+    "build": "npm run --prefix frontend build && mkdir -p dist && cp -r frontend/dist/* dist/"
+  },
+  "dependencies": {}
+}
