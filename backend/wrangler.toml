@@ -1,0 +1,19 @@
+name = "raja-rani-chor-sipahi-backend"
+main = "src/index.ts"
+compatibility_date = "2024-05-24"
+
+[durable_objects]
+bindings = [
+  { name = "GAME_ROOM", class_name = "GameRoom" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["GameRoom"]
+
+# Phase 3: Cloudflare D1 Database binding declaration
+[[d1_databases]]
+binding = "DB"
+database_name = "raja_rani_db"
+database_id = "7c3aed59-a78b-4c64-838e-b799df25e32b" # Placeholder for production DB UUID
+migrations_dir = "migrations"

@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+.wrangler/
+
+# Local build outputs
+dist/
+build/
+.gradle/
+android/app/build/
+android/.gradle/
+
+# Local property configuration files
+local.properties
+
+# Antigravity system logs
+.system_generated/
+*.log
+
+# Misc
+.DS_Store
+Thumbs.db
